@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { parser, renderer } from '@sendbird/react-uikit-message-template-view';
 import type { Template } from '@sendbird/uikit-message-template';
 import { createMessageTemplate } from '@sendbird/uikit-message-template';

@@ -1,10 +1,9 @@
 import React from 'react';
-import {MessageProvider} from '@sendbird/react-uikit-message-template-view';
-import {BaseMessage} from '@sendbird/chat/message';
+import { MessageProvider } from '@sendbird/react-uikit-message-template-view';
+import { BaseMessage } from '@sendbird/chat/message';
 import {
   dummyMessageTemplateMessageOne,
-  dummyMessageTemplateMessageTwo,
-  mockBaseMessage
+  mockBaseMessage,
 } from './messageTemplateDummyData.mock';
 import MessageTemplate from '../../modules/GroupChannel/components/MessageTemplate';
 
