@@ -7,30 +7,25 @@ import './index.scss';
 export interface MessageTemplateProps {
   templateItems: Template['body']['items'];
 }
-const MessageTemplate = ({
-  templateItems,
-}: MessageTemplateProps) => {
-  const CustomTemplate = useMemo(() => {
-    const { MessageTemplate } = createMessageTemplate({
-      parser,
-      renderer,
-      Container: ({ children }) => {
-        return (
-          <div
-            className={[
-              'sb-message-template__parent',
-              'sendbird-message-template__root'
-            ].join(' ')}
-          >
-            {children}
-          </div>
-        );
-      },
-    });
 
-    return MessageTemplate;
-  }, []);
+const { MessageTemplate: CustomTemplate } = createMessageTemplate({
+  parser,
+  renderer,
+  Container: ({ children }) => {
+    return (
+      <div
+        className={[
+          'sb-message-template__parent',
+          'sendbird-message-template__root'
+        ].join(' ')}
+      >
+        {children}
+      </div>
+    );
+  },
+});
 
+const MessageTemplate = ({ templateItems }: MessageTemplateProps) => {
   return <CustomTemplate templateItems={templateItems} />;
 };
 
